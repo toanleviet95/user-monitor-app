@@ -1,0 +1,28 @@
+<div class="main-agileinfo">
+  <div class="agileits-top">
+    <form ng-submit="register()" name="signUpForm">
+      <input ng-disabled="loading" class="text" ng-model="user.name" type="text" name="name" placeholder="Name">
+      <input ng-disabled="loading" class="text" ng-model="user.firstName" type="text" name="firstName" placeholder="First Name">
+      <input ng-disabled="loading" class="text" ng-model="user.lastName" type="text" name="lastName" placeholder="Last Name">
+      <input ng-disabled="loading" class="text" ng-model="user.email" type="text" name="email" placeholder="Email (Required)" ng-pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/">
+      <div class="error" ng-if="error.email">* {{error.email}}</div>
+      <input ng-disabled="loading" class="text" ng-model="user.password" type="password" name="password" placeholder="Password (Required)">
+      <div class="error" ng-if="error.password">* {{error.password}}</div>
+      <input ng-disabled="loading" class="text" ng-model="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm Password">
+      <div class="error" ng-if="error.confirmPassword">* {{error.confirmPassword}}</div>
+      <input ng-hide="loading" type="submit" value="REGISTER">
+    </form>
+    <div ng-if="loading">
+      <img class="center-block" src="images/loading.gif" />
+    </div>
+    <div class="error" ng-if="error.serverError">* {{error.serverError}}</div>
+    <div class="success" ng-if="success">{{success}}</div>
+    <p ng-if="!loading">Already have an Account ?
+      <a class="click-go-to" ng-href="#!sign-in"> Click to Login</a>
+    </p>
+  </div>
+</div>
+<div class="w3copyright-agile">
+  <p>© 2018 User Monitor App. All rights reserved | Design by ToanLV
+  </p>
+</div>

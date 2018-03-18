@@ -1,0 +1,22 @@
+<div ng-hide="processing" class="main-agileinfo">
+  <div class="agileits-top">
+    <form ng-submit="login()" name="signInForm">
+      <input ng-disabled="loading" ng-model="user.email" class="text" type="text" name="email" placeholder="Email" ng-pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/">
+      <div class="error" ng-if="error.email">* {{error.email}}</div>
+      <input ng-disabled="loading" ng-model="user.password" class="text" type="password" name="password" placeholder="Password">
+      <div class="error" ng-if="error.password">* {{error.password}}</div>
+      <div class="error" ng-if="error.serverError">* {{error.serverError}}</div>
+      <input ng-hide="loading" type="submit" value="LOGIN">
+    </form>
+    <div ng-if="loading">
+      <img class="center-block" src="images/loading.gif" />
+    </div>
+    <p ng-if="!loading">Don't have Account ?
+      <a class="click-go-to" ng-href="#!sign-up"> Click to Sign up</a>
+    </p>
+  </div>
+</div>
+<div ng-hide="processing" class="w3copyright-agile">
+  <p>© 2018 User Monitor App. All rights reserved | Design by ToanLV
+  </p>
+</div>
