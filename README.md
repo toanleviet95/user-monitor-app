@@ -13,7 +13,9 @@ Step 4: Then run command line: "npm install" to install node_modules
 Step 5: Finally run command line: "grunt serve" to run website on localhost port 9000
 
 ## Production deployment
+
 Project on github: https://github.com/toanleviet95/user-monitor-app
+
 You can visit the production web page by github link: https://toanleviet95.github.io 
 
 ## Build & deployment
