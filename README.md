@@ -10,9 +10,13 @@ Step 3: Go to source folder and run command line: "bower install" to install bow
 
 Step 4: Then run command line: "npm install" to install node_modules
 
-Step 5: Finally run command line: "grunt serve" to run website on localhost port 9000 
+Step 5: Finally run command line: "grunt serve" to run website on localhost port 9000
+
+## Production deployment
+You can visit the production web page by github link: https://toanleviet95.github.io 
 
 ## Build & deployment
+
 If you want to build source to deploy, run command line: "grunt build"
 
 Then a folder called "dist" will be auto generated
